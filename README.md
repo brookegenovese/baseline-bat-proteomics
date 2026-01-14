@@ -1,4 +1,4 @@
-# Baseline serum proteome of the Egyptian rousette bat (Rousettus aegyptiacus) reveals signatures of immunity, proteostasis, and metabolism
+# Serum proteome of the Egyptian rousette bat (Rousettus aegyptiacus) reveals signatures of immunity, proteostasis, and metabolism
 
 --- 
 **Authors:** Brooke N. Genovese [1], Nistara Randhawa [2], Benjamin A. Neely [3], Gabriela Grigorean [4], Amy J. Schuh [5], Brian R. Amman [5], Jessica A. Elbert [6], Simon J. Anthony [7], Jonna A.K. Mazet [1,2], Jonathan S. Towner [5,6], Brian H. Bird [1]
