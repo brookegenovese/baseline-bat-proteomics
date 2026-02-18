@@ -1,4 +1,4 @@
-# Mar-2025 ==== author: Brooke Genovese
+# Feb-2026 ==== author: Brooke Genovese
 ##============================================================================##
 # * GENERATING PLOTS AND FIGURES *
 # * ERB specimens + batch covariate *
@@ -476,5 +476,38 @@ ggsave(filename = output_path,
        dpi = 300,
        bg = "white")  
 
+
+##============================================================================##
+## distribution of complement proteins vs. full serum proteome
+##============================================================================##
+# important note that this analysis is crude given that we are comparing 
+# proteins that have very different abundance ranges
+
+comp_vs_all <- c %>%
+  # note: remove APOR for consistency
+  filter(human_gene_name != "APOR") %>% 
+  mutate(is_complement = ifelse(leading_accession %in% comp_path, 
+                                "Complement Proteins", 
+                                "All Other Proteins"))
+my_comparisons <- list( c("All Other Proteins", "Complement Proteins") )
+
+# plot w/ stat_compare_means
+P_comp_box_stats <- ggplot(comp_vs_all, aes(x = is_complement, y = log10_medianquantity, fill = is_complement)) +
+  geom_boxplot(width = 0.5, outlier.alpha = 0.3) +
+  stat_compare_means(comparisons = my_comparisons, 
+                     label = "p.signif", # "p.format" for exact p-value, "p.signif" for ****
+                     method = "wilcox.test",
+                     label.y = max(comp_vs_all$log10_medianquantity) + 0.5) + 
+  scale_fill_manual(values = c("All Other Proteins" = "darkgrey", 
+                               "Complement Proteins" = "#F8766D")) +
+  labs(
+    x = "",
+    y = "Log10 Median Quantity",
+    title = ""
+  ) +
+  my_theme() +
+  theme(legend.position = "none")
+
+P_comp_box_stats 
 
 

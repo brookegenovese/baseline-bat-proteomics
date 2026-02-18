@@ -1,4 +1,4 @@
-# Mar-2025 ==== author: Brooke Genovese
+# Dec-2025 ==== author: Brooke Genovese
 ##============================================================================##
 # * EXPLORATORY SEX DIFFERENCES ANALYSIS: rCV CALCULATIONS *
 # * ERB specimens *
@@ -33,10 +33,9 @@ my_theme <- function(base_size = 10, base_family = "Arial") {
 } 
 
 ##============================================================================##
-## 
+## import data
 ##============================================================================##
 
-# --- import data --- #
 
 dat0 <- read_tsv("./protein_abundance__filter by group independently.tsv")
 dat0 <- as.data.frame(dat0)
