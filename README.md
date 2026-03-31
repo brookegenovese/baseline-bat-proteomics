@@ -14,3 +14,8 @@
 
 **Corresponding authors:** 
 Brian H. Bird (bhbird@ucdavis.edu)
+
+**PRIDE Repository dataset identifier:** PXD072134
+<div align="center">
+  <img src="Figure1.png" alt="Example Image" width="600">
+</div>
